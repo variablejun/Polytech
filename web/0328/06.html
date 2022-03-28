@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>datalist 연습</title>
+</head>
+<body>
+	<h1>가보고 싶은 나라와 장소</h1>
+	<hr>
+	<form name="frm1" method="get" action="05.html">
+
+		* 가보고 싶은 나라 : <input type="text" name="country" list="country1">
+			<datalist id = "country1">
+				<option value="독일"></option>
+				<option value="헝가리"></option>
+				<option value="벨기에"></option>
+				<option value="터키"></option>
+			</datalist>
+			<br><br>
+
+		* 가보고 싶은 장소 : <input type="text" name="place" list="place1">
+			<datalist id = "place1">
+				<option value="해수욕장"></option>
+				<option value="놀이공원"></option>
+				<option value="부산"></option>
+				<option value="속초"></option>
+			</datalist>
+			<br><br>
+	<h1>좋아하는 과일을 모두 선택 하세요~</h1>
+	<hr>
+	<input type="checkbox" name="ckb1" value="Orange" checked> 오렌지
+	<input type="checkbox" name="ckb2" value="gyul"> 귤
+	<input type="checkbox" name="ckb3" value="banana"> 바나나	
+	<hr>
+	<h1>다양한 버튼들</h1>
+
+	* input태그를 사용한 버튼들 : 
+		<input type="button" name="btn1" value="일반 버튼" onclick="alert('일반버튼클릭')">
+		<input type="reset" name="btn2" value="취소 버튼">
+		<input type="submit" name="btn3" value="전송 버튼">
+		<input type="image" name="btn4" src="img/button.png" onclick="alert('이미지버튼클릭')">
+	<br><br>
+
+	* button태그를 사용한 버튼들 :
+		<button type="button" onclick="alert('버튼태그사용')">일반버튼</button>
+		<button type="reset">취소버튼</button>
+		<button type="submit">전송버튼</button>
+		<button type="submit" onclick="alert('버튼태그이미지버튼클릭')" ><img src="img/button.png"></button>
+
+	</form>
+
+</body>
+</html>
