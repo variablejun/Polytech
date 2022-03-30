@@ -16,9 +16,9 @@ xxx.xx 인치는 xxx.xxcm 입니다.몰입형 리더
 #define cm 2.54
 
 int main(void){
-    float inchs;
+    float inch;
     printf("<인치를 센티미터로 환산하는 프로그램> \n");
     printf("인치를 입력하세요(소수 둘째자리 까지) : ");
-    scanf("%f" , &inchs); // 소수점 자리를 정해서 입력하는것은 불가능하다 출력문에서 바꾸어야한다.
-    printf("%.2f 인치는 %.2f cm 입니다.",inchs, inchs * cm);
+    scanf("%f" , &inch); // 소수점 자리를 정해서 입력하는것은 불가능하다 출력문에서 바꾸어야한다.
+    printf("%.2f 인치는 %.2f cm 입니다.",inch, inch * cm);
 }

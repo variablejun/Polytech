@@ -13,11 +13,11 @@
 
 
 int main(void){
-    char name[9];
+    char name2[9];
 
     printf("<배열을 사용한 문자열 출력> \n");
     printf("문자를 입력:");
 
-    scanf("%s" , name); // 배열일 경우 & 붙이지 않아도 배열이름 자체가 배열의 첫번째 주소를 가리킨다
-    printf("문자를 출력:\"%s\" \n",name);
+    scanf("%s" , name2); // 배열일 경우 & 붙이지 않아도 배열이름 자체가 배열의 첫번째 주소를 가리킨다
+    printf("문자를 출력:\"%s\" \n",name2);
 }
