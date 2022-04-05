@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		셀렉터(selector) 연습
+	</title>
+	<style type="text/css">
+		h3, li{ 
+			color: magenta;
+		}
+		.waring{
+			color: orangered;
+		}
+		.main{
+			background-color: aliceblue;
+		}
+		#list{
+			background-color: mintcream;
+		}
+		div > strong{ 
+			color: royalblue;
+		}
+		ul strong{
+			color: lavender;
+			background-color: yellow;
+		}
+		input[type=text]{
+			color: blue;
+		}
+		h3:first-letter{
+			color: red;
+		}
+		li:hover{
+			background-color: yellowgreen;
+		}
+		a:link{
+			color: darkcyan;
+			text-decoration: none;
+		}
+		a:hover{
+			color: white;
+			background-color: plum;
+		}
+		a:active{
+			color: yellow;
+			background-color: navy;
+		}
+		a:visited{
+			color: red;
+		}
+	</style>
+</head>
+<body class="main">
+	<h3>융합 UI 실습</h3>
+	<hr>
+	<div>
+		<div>1학기 <strong>학습 내용</strong></div>
+		<ul id="list">
+			<li>
+				HTML5
+			</li>
+			<li>
+				<strong>CSS3</strong>
+			</li>
+			<li>
+				JavaScriot
+			</li>
+		</ul>
+		<div class="waring">60점 이하는 F!</div>
+		나의 결심<input type="text" name="d1" size="20"><br>
+		<input type="button" name="btn1" value="완료">
+		<hr>
+		<a href="http://www.ssu.ac.kr">숭실대</a>
+	</div>
+</body>
+</html>
