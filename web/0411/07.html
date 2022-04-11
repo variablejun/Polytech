@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>박스 그림자</title>
+	<style type="text/css">
+		div{
+			width: 150px;
+			height: 70px;
+			padding: 10px;
+			border: 10px solid pink;
+		}
+		.redBox{
+			box-shadow: 10px 10px red;
+		}
+		.blueBlockBox{
+			box-shadow: 10px 10px 5px blue;			
+		}
+		.multiBox{
+			box-shadow: 2px 2px 2px black, 0px 0px 25px blue, 0px 0px 5px darkblue;
+		}
+	</style>
+</head>
+<body>
+	<h3>box-shadow 프로퍼티(속성)</h3>
+	<hr>
+	<div class="redBox">뚱이</div><br>
+	<div class="blueBlockBox">뚱이</div><br>
+	<div class="multiBox">뚱이</div><br>
+	
+</body>
+</html>
