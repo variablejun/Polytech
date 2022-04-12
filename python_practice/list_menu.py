@@ -1,7 +1,4 @@
-from operator import add
 
-
-katok = []
 def add_data(friend):
     katok.append(None) # [] 아무것도 들어있지 않은 임의의 공간을 만든다.
     kLen = len(katok) # len 함수로 리스트의 길이를 구하고 변수에 넣는다.
@@ -9,13 +6,6 @@ def add_data(friend):
     # 0번재 부터 시작하기 때문에 방이 하나라서 Len이 1 이더래도 
     # 데이터를 삽입하는 공간은 리스트의 0번째 방이다.
     
-add_data('지헌')
-add_data('나경')
-add_data('하영')
-add_data('지선')
-add_data('규리')
-
-print(katok)
 
 def select_add_data(position,friend): # 원하는 위치를 입력해서 삽입하는 함수
     katok.append(None) 
@@ -29,15 +19,10 @@ def select_add_data(position,friend): # 원하는 위치를 입력해서 삽입�
         katok[i-1] = None
         
     katok[position] = friend # 지정한 위치에 데이터 삽입
-    
-select_add_data(2,'새롬')
-print(katok)
-select_add_data(6,'서연')
-print(katok)
 
 
 def del_data(position):
-    katok[position] = None # 해당 위치의 데이터를 삭제한다
+    katok[position] = None # 해당 위치의 데이터 삭제한다
     kLen = len(katok) 
     for i in range(position+1,kLen): # i를 지정위치+1칸부터 마지막칸까지
         katok[i -1] = katok[i] # 현재 위치의 데이터를 한칸 전으로 옮기고
@@ -45,7 +30,55 @@ def del_data(position):
 
     del(katok[kLen-1]) # 비어있는 마지막 칸을 지운다
 
-del_data(2)
-print(katok)
-del_data(3)
-print(katok)
+
+
+katok = []
+select_menu = 0
+
+def print_main() :
+    print(__name__)
+
+print("모듈 이름" + __name__ + "입니다.")
+
+if __name__ == "__main__" : # 다른 모듈에서 호출 시 아래 코드는 실행하지 않고 함수만 가져온다.
+    while(select_menu!=4):
+        select_menu = int(input("선택하세요 1: 추가, 2: 삽입, 3: 삭제, 4: 종료 -->"))
+        # input 함수는 scanf와 같은 기능을 하나 텍스트로 반환되기때문에 캐스팅을 거치거나 
+        # 조건의 숫자를 텍스트로 받아야한다.
+        
+        if(select_menu == 1):
+            data = input("추가할 데이터-->")
+            if (data==""):
+                print("데이터를 입력 하세요.")
+                continue
+            add_data(data)
+            print(katok)
+            
+        elif(select_menu == 2):
+            posi = int(input("삽입할 위치-->"))
+            if posi >= len(katok):
+                print("배열 범위 밖입니다.")
+                continue
+            data = input("추가할 데이터-->")
+            if (data==""):
+                print("데이터를 입력 하세요.")
+                continue
+            
+            select_add_data(posi, data)
+            print(katok)     
+        
+        elif(select_menu == 3):
+            posi = int(input("삭제할 위치-->"))
+            if posi >= len(katok):
+                print("배열 범위 밖입니다.")
+                continue
+            del_data(posi)
+            print(katok) 
+        
+        elif(select_menu == 4):
+            print(katok)
+            exit
+            
+        else :
+            print("1 ~ 4 중 하나를 입력하세요.")
+            continue       
