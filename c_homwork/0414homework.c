@@ -17,11 +17,22 @@ int main(void){
     scanf("%d",&star);
     int i;
     int j;
-    int temp;
+
+    int temp=0; // 초기화 없으면 오류
     int a = 1;
+
+    while (star > 0) //입력된 정수를 뒤집는 반복문, 입력한대로 출력을 하면 뒤에서 부터 출력을 한다 그래서 뒤집어 주어 조건에 맞도록하였다.
+    {
+        temp = temp * 10; //립력된 정수에 10을 곱하여 자리를 뒤집는다 (3)
+        temp = temp + (star % 10); // 10으로 나눈 나머지를 임시 변수에 넣고 (1)
+        star = star / 10;// 10으로 나누어 자리수를 덜어준다. (2)
+    }
+
+    temp = temp * 2;
+
     while (1)
     {
-        j = star % 10;
+        j = temp % 10; //10으로 나누어 나머지만큼 별을 찍어준다.
         if (j==0)
         {
             break;
@@ -32,13 +43,11 @@ int main(void){
             printf("*");
             a++;
         }
-        a = 1;
-        printf("\n");
-        star = star / 10;
+        a = 1; // 증가된 변수 a 초기화
+        printf("\n"); //한 자리수의 별이 모두 출력되면 줄바꿈
+        temp = temp / 10;
         
         
     }
-    
-   
-    
+
 }
