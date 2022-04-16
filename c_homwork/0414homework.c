@@ -7,6 +7,10 @@
 ******
 **
 ********
+
+교수님 피드백 해결본
+#define _CRT_SECURE_NO_WARNINGS 
+0일때 진행이 되지 않던점
 */
 #include <stdio.h>
 int main(void){
@@ -26,24 +30,19 @@ int main(void){
         temp = temp + (star % 10); // 10으로 나눈 나머지를 임시 변수에 넣고 (1)
         star = star / 10;// 10으로 나누어 자리수를 덜어준다. (2)
     }
-    while (1)
+    while (temp>0)
     {
         j = temp % 10; //10으로 나누어 나머지만큼 별을 찍어준다.
-        if (j==0)
-        {
-            printf("\n");
-            continue;
-        }
+        
 
         while (j>=a)
         {
-            printf("**");
+            printf("**");  //2배수 별을 두개찍는다.
             a++;
         }
         a = 1; // 증가된 변수 a 초기화
         printf("\n"); //한 자리수의 별이 모두 출력되면 줄바꿈
         temp = temp / 10;
-        
         
     }
 
