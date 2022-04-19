@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>애니메이션 연습</title>
+	<style type="text/css">
+		@keyframes h3Ani{
+			from{font-size: 500%; color: darkolivegreen;}
+			to{font-size: 100%; color: yellowgreen;}
+		}
+
+		h3{
+			animation-name: h3Ani;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+
+		}
+		span{
+			transition: font-size 5s;
+		}
+		span:hover{
+			font-size: 500%;
+		}
+	</style>
+</head>
+<body>
+	<h3>꽝!</h3>
+	<span>전환효과</span>
+</body>
+</html>

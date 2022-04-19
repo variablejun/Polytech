@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animation</title>
+	<style type="text/css">
+		@keyframes spanAni{
+			0%{
+				color: blue;
+				font-size: 12px;
+
+			}
+			30%{
+				color: lavenderblush;
+				font-size: 17px;
+			}
+			100%{
+				color: blue;
+				font-size: 22px;
+			}
+
+		}
+		span{
+			animation-name: spanAni;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		폴리텍대학교 <span>인공지능</span>소프트웨어학과
+	</p>
+</body>
+</html>
