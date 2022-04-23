@@ -7,6 +7,9 @@
             text-shadow: 10px 10px 10px black;
 
         }
+        a{
+            text-decoration: none;
+        }
         body{
             background-color:#FF6670;
             background: linear-gradient(to right,#FF6670, orange);
@@ -15,16 +18,26 @@
             background-color: white;
             
         }
-        div{
-            width: 500;
-            height: 200;
+        .main_box{
+
+            width: 1500;
+            height: 125;
             background-color: mintcream;
             position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -100;
-            margin-left: -250;
+            left: 6.5%;
             border-radius: 40px 40px 40px 40px;
+            box-shadow: 5px 5px 10px black;
+        }
+        .main_frame_box{
+            
+            width: 1500;
+            height: 1000;
+            top: 25%;
+            left: 6.5%;
+
+            position: absolute;
+            border-radius: 40px 40px 40px 40px;
+            background-color: mintcream;
             box-shadow: 5px 5px 10px black;
         }
         .note{
@@ -41,27 +54,26 @@
             -webkit-filter: grayscale(50);
             filter: grayscale(50);
         }
+
     </style>
-</html>
+
 <body>
     <header>
 
     </header>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1><strong>Developer Jun's</strong></h1>
+
+    <a href="main.html"><h1><strong>Developer Jun's</strong></h1></a>
     <div class="main_box">
         <table>
-            <td>
-                
-                <a href="https://github.com/variablejun" target="black"><img src = "imgs/github.svg" class="icon"/></a>
-                <a href="https://velog.io/@variablejun" target="black"><img src = "imgs/velog.svg" class="icon"/></a>
-                <a href="https://music.apple.com/profile/jbj0217" target="black"><img src = "imgs/applemusic.svg" class="icon"/></a>
+            <td>              
+                <a href="https://github.com/variablejun/variablejun" target="main"><img src = "imgs/github.svg" class="icon"/></a>
+                <a href="https://velog.io/@variablejun" target="main"><img src = "imgs/velog.svg" class="icon"/></a>
+                <a href="https://music.apple.com/profile/jbj0217" target="main"><img src = "imgs/applemusic.svg" class="icon"/></a>
                 <img src="imgs/producthunt.svg" class="icon">
-            </td>
-            <td>
-
             </td>
         </table>
     </div>
-
-</body>
+    <iframe class="main_frame_box" name = "main">
+        
+    </iframe>
+</body></html>
