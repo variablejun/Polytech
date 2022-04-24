@@ -11,12 +11,15 @@
             text-decoration: none;
         }
         body{
-            background-color:#FF6670;
+
             background: linear-gradient(to right,#FF6670, orange);
         }
         header{
             background-color: white;
             
+        }
+        body{
+            background-color: white;
         }
         .main_box{
 
@@ -56,6 +59,12 @@
         }
 
     </style>
+	<script language="javascript">
+    	function changeColor(color)
+    	{
+         	document.body.style.background=color
+    	}
+	</script>
 
 <body>
     <header>
@@ -66,9 +75,9 @@
     <div class="main_box">
         <table>
             <td>              
-                <a href="https://github.com/variablejun/variablejun" target="main"><img src = "imgs/github.svg" class="icon"/></a>
-                <a href="https://velog.io/@variablejun" target="main"><img src = "imgs/velog.svg" class="icon"/></a>
-                <a href="https://music.apple.com/profile/jbj0217" target="main"><img src = "imgs/applemusic.svg" class="icon"/></a>
+                <a href="intro.html" target="main" onclick="changeColor('linear-gradient(to right, #ff6e7f, #bfe9ff)')"><img src = "imgs/github.svg" class="icon"/></a>
+                <a href="https://velog.io/@variablejun" target="main" onclick="changeColor('linear-gradient(to right, #9796f0, #fbc7d4)')"><img src = "imgs/velog.svg" class="icon"/></a>
+                <a href="music.html" target="main" onclick="changeColor('linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4)')"><img src = "imgs/applemusic.svg" class="icon"/></a>
                 <img src="imgs/producthunt.svg" class="icon">
             </td>
         </table>
@@ -77,3 +86,4 @@
         
     </iframe>
 </body></html>
+<!--#ff32b1, #faf082 -->>
