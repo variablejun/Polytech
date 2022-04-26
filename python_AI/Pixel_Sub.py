@@ -26,7 +26,7 @@ B_plus=np.zeros((RGB_img1.shape[0],RGB_img1.shape[1]),dtype=np.ubyte)
 #for문을 돌며 픽셀 빼기 연산 하기
 for h in range(RGB_img1.shape[0]):
   for w in range(RGB_img1.shape[1]):
-    R_plus[h,w] = np.abs(np.int32(R_img1[h,w]) - np.int32(R_img2[h,w])) 
+    R_plus[h,w] = np.abs(np.int32(R_img1[h,w]) - np.int32(R_img2[h,w])) # 픽셀의 뺄셈이다. 결과값이 음수가 될 수 있어 abs이용해서 절대값으로 결과를 바꾼다.
     G_plus[h,w] = np.abs(np.int32(G_img1[h,w]) - np.int32(G_img2[h,w])) 
     B_plus[h,w] = np.abs(np.int32(B_img1[h,w]) - np.int32(B_img2[h,w])) 
    

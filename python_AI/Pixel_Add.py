@@ -10,11 +10,12 @@ drive.mount('/content/gdrive')
 img1 = cv2.imread('/content/gdrive/My Drive/Image_Processing/aero2.bmp')
 img2 = cv2.imread('/content/gdrive/My Drive/Image_Processing/milkdrop.bmp')
 # BGR채널순서를 RGB채널로 변경
-RGB_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB) 
+RGB_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB) # cv2는 BGR(RGB채널이 반대로 되어있다.) 그것을 RGB로 바꾸어준다
 RGB_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB) 
-output_img = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB) 
+
+output_img = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB) # 두픽셀을 연산한 값을 넣어 아웃풋으로 출력
 # RGB 채널 나누기
-R_img1,G_img1,B_img1=cv2.split(RGB_img1)
+R_img1,G_img1,B_img1=cv2.split(RGB_img1) #RGB 채널을 분리한다.
 R_img2,G_img2,B_img2=cv2.split(RGB_img2)
 #  0으로 초기화
 R_plus = np.zeros((RGB_img1.shape[0],RGB_img1.shape[1]),dtype=np.ubyte)
@@ -25,7 +26,7 @@ for h in range (RGB_img1.shape[0]):
   for w in range (RGB_img1.shape[1]):
     r= np.int32(R_img1[h,w])+np.int32(R_img2[h,w])
     if(r > 255):
-      R_plus[h,w] = r- (255+1)
+      R_plus[h,w] = r- (255+1) #wrapping 방식 -> 범위를 초과한 값과 최대값 + 1을 뺀 값을 넣는것
     else:
       R_plus[h,w] = r
     g= np.int32(G_img1[h,w])+np.int32(G_img2[h,w])

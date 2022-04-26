@@ -31,7 +31,7 @@ if __name__ == "__main__":
     head = node # 헤드라는 변수에 첫번째 데이터가 들어있는 노드를 삽입한다.
     memory.append(node) # 메모리라는 리스트 변수에 추가한다.
     
-    for data in dataArray[1:] : # 0버
+    for data in dataArray[1:] : # 
         pre = node
         node = Node()
         node.data = data

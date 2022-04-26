@@ -23,8 +23,9 @@ B_plus = np.zeros((RGB_img1.shape[0],RGB_img1.shape[1]),dtype=np.ubyte)
 #for문을 돌며 픽셀값 계산하기
 for h in range (RGB_img1.shape[0]):
   for w in range (RGB_img1.shape[1]):
-    r= np.int32(R_img1[h,w])+np.int32(R_img2[h,w])
-    if(r > 255):
+    r= np.int32(R_img1[h,w])+np.int32(R_img2[h,w]) 
+    if(r > 255): # 두 픽셀을 단순히 더하였을 때 255인 픽셀의 범위를 초과하는 경우가 생긴다 그것을 처리하여 255가 넘는것은 255로 고정시키는것
+      #saturation
       R_plus[h,w] = 255
     else:
       R_plus[h,w] = r

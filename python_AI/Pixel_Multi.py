@@ -23,7 +23,7 @@ def saturation(value): #saturation함수로 정의하기
 #for문을 돌며 픽셀 곱하기 연산 하기
 for h in range(RGB_img1.shape[0]):
   for w in range(RGB_img1.shape[1]):
-    R_plus[h,w] = saturation(np.int32(R_img1[h,w])*C) 
+    R_plus[h,w] = saturation(np.int32(R_img1[h,w])*C) # 미리 정의 해놓은 상수로 곱한다. saturation, wrapping, minmax로 오버플로우 처리한다.
     G_plus[h,w] = saturation(np.int32(G_img1[h,w])*C) 
     B_plus[h,w] = saturation(np.int32(B_img1[h,w])*C) 
 

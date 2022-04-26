@@ -28,7 +28,7 @@ for h in range (RGB_img1.shape[0]):
   for w in range (RGB_img1.shape[1]):
     r= np.int32(R_img1[h,w])+np.int32(R_img2[h,w])
     if(r > 255):
-      R_plus[h,w] = (r-min)/(max-min) * max
+      R_plus[h,w] = (r-min)/(max-min) * max # 넘치는 값을 미리정규화된 값으로 0~255 사이로 재계산
     else:
       R_plus[h,w] = r
     g= np.int32(G_img1[h,w])+np.int32(G_img2[h,w])
