@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>prompt() 내장함수: 입력이 가능한 대화상자</title>
+	<script type="text/javascript">
+		function dialogTest(){
+			let result = prompt("성명을 입력하세요~","전병준");
+			if(result == null){
+				alert("취소 또는 닫기 버튼을 클릭하셨내요~");
+			}else if(result == ""){
+				alert("성명을 입력하지 않으셨네요~");
+			}else{
+				alert(result + "님 반갑습니다.");
+			}
+			
+
+		}
+		function dialogTest2(){
+			let result = confirm("정말로 삭제하시겠습니까?");
+			if(result){
+				alert("정상적으로 삭제되었습니다.");
+			}else{
+				alert("삭제가 취소되었습니다.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>1. 취소버튼 또는 닫기버튼 반환값: null</h3>
+	<h3>2. 아무것도 입력되지 않은상태에서 확인버튼 클릭시 반환값: ""(empty string)</h3>
+	<h3>3. 값을 입력한 후 확인버튼 클릭시 반환값: 입력된 문자열</h3>
+	<hr>
+	<h1>confirm함수 호출시 반환값 종류</h1>
+	<h3>1. 확인 버튼 클릭시 반환값: true</h3>
+	<h3>2. 취소 버튼 클릭시 반환값: false</h3>
+	<form>
+		<button type="button" onclick="dialogTest()">prompt 연습</button><br>
+		<button type="button" onclick="dialogTest2()">confirm 연습</button>
+	</form>
+</body>
+</html>

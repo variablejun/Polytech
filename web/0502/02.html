@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>script 태그에 자바스크립트 코드 작성</title>
+	<script type="text/javascript">
+		function click1(obj){
+			obj.src = "imgs/c.jpg"
+		}
+		function over1(obj){
+			obj.src = "imgs/ca.jpg"			
+		}
+		function out1(obj){
+			obj.src = "imgs/cv.jpg"			
+		}
+	</script>
+</head>
+<body>
+	<img src="imgs/cv.jpg" onclick="click1(this)" onmouseover="over1(this)" onmouseout="out1(this)">
+</body>
+</html>
