@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>삼항조건연산자</title>
+</head>
+<body>
+	<h3>삼항조건연산자</h3>
+	<hr>
+	<script type="text/javascript">
+		let x = prompt("정수입력 첫번쨰: ",0);
+		let y = prompt("정수입력 두번쨰: ",0);
+		x = parseInt(x);
+		y = parseInt(y);
+		let max = 0;
+		if (x > y) {
+			max = x
+		}else{
+			max = y
+		}
+
+		//let max = x > y ? x: y;
+
+		document.write(x + ", "+ y + "중에서 최대값은 " + max + "입니다.");
+	</script>
+</body>
+</html>

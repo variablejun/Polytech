@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>삼항조건연산자2</title>
+</head>
+<body>
+	<h3>삼항조건연산자를 사용해서 두 수의 차이를 양수로 출력</h3>
+	<hr>
+	<script type="text/javascript">
+		let x = parseInt(prompt("정수입력 첫번쨰: ",0));
+		let y = parseInt(prompt("정수입력 두번쨰: ",0));
+
+		let result = x > y ? x - y : y - x;
+		document.write(x + ", " + y + " 두 수의 차이는 " + result + "입니다.");
+	</script>
+</body>
+</html>
