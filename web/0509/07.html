@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>continue 연습</title>
+</head>
+<body>
+	<h2>1 ~ 10 까지의 숫자중에서 3으로 나눈 나머지가 1인 경우에만 합계를 구하고 출력</h2>
+	<hr>
+	<script type="text/javascript">
+		let sum = 0;
+		for (let i = 0; i <= 10; i++) {
+			if (i % 3 != 1) {
+				continue;
+			}
+			sum += i;
+			document.writeln(i + " ");
+		}
+		document.write(" : 합계는 "+ sum);
+	</script>
+</body>
+</html>

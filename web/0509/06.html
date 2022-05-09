@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>break 연습</title>
+</head>
+<body>
+	<h3>1 ~ 얼마까지 더해야 합계가 3000을 넘나요?</h3>
+	<hr>
+	<script type="text/javascript">
+		let i = 0;
+		let sum = 0;
+
+		while(true){
+			sum = sum + i;
+			
+			if (sum>3000) {
+				break;
+			}
+			i++;
+		}
+		document.write("0부터 "+i+"까지의 합계가 3000을 넘는가?: " + sum);
+	</script>
+</body>
+</html>
