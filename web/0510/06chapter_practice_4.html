@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function week(){
+			let days = prompt("월화수목금토일 중에서 입력하세요");
+			if (days == '월' || days == '화' || days == '수' || days == '목' ) {
+				document.write(days + " 은(는) 출근");
+			}else if (days == '금' || days == '토' || days == '일') {
+				document.write(days + " 은(는) 휴일");
+			}else{
+				document.write("요일중에서 입력해주세요.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>월화수목금토일</h2>
+	<hr>
+	<script type="text/javascript">
+		week();
+	</script>
+</body>
+</html>

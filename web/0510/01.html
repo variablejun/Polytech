@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>구구단</title>
+	<script type="text/javascript">
+		function gugudan(){
+			let dan = parseInt(prompt("원하는 구구단의 단수를 입력하세요.(1~9)"));
+			if (isNaN(dan) || dan > 9 || 1 > dan) {
+				alert("단수가 잘못 입력되었습니다.");
+				return 0;
+			}
+			for (let i = 1; i <= 9; i++){
+				document.write(dan + " X " + i + " = " + (dan * i) + "<br>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>반복문을 사용하여 구구단을 출력합니다.</h2>
+	<hr>
+	<button type="button" onclick="gugudan()">구구단 출력</button>
+</body>
+</html>
