@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array 객체 생성 및 사용</title>
+</head>
+<body>
+	<h2>Array 객체에 온도를 저장하여 평균온도를 구해봅시다.</h2>
+	<hr>
+	<script type="text/javascript">
+		let degree = new Array();
+		degree[0] = 15.2;
+		degree[1] = 13.2;
+		degree[2] = 11.2;
+		degree[3] = 18.2;
+		degree[4] = 19.2;
+		degree[5] = 16.2;
+		let sum = 0;
+		for(let i = 0; i <degree.length; i++){
+			sum = sum + degree[i];
+			document.writeln(degree[i] + "::");
+		}
+		let avg = sum / degree.length;
+		document.writeln("<br><br>");
+		document.write("5월의 평균 아침 온도: 섭씨 " 
+			+ avg.toFixed(2) +"도");
+
+	</script>
+</body>
+</html>
