@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>사용자 객체 만들기(new Object())</title>
+	<script type="text/javascript">
+		function inquiry(){
+			return this.balance;
+		}
+
+		function deposit(money) {
+			this.balance += money;
+		}
+
+		function withdraw(money) {
+			this.balance -= money;
+			return money;
+		}
+
+		let account = new Object();
+		account.owner = "전병준";
+		account.code = "111-333-777";
+		account.balance = 10000;
+		account.inquiry = inquiry;
+		account.deposit = deposit;
+		account.withdraw = withdraw;
+		
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("<h1>계좌정보</h1>");
+		document.write("<h3>성명: " + account.owner + "</h3>");
+		document.write("<h3>계좌번호: " + account.code + "</h3>");
+		document.write("<h3>잔액: " + account.balance + "원</h3>");
+		account.deposit(50000)
+		document.write("<h3>50000원 예금하다.</h3>");
+		document.write("<h3>잔액: " + account.inquiry() + "원</h3>");
+		account.withdraw(30000)
+		document.write("<h3>30000원 인출하다.</h3>");		
+		document.write("<h3>잔액: " + account.inquiry() + "원</h3>");
+
+
+
+	</script>
+</body>
+</html>

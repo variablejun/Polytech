@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Date 객체의 다양한 메소드</title>
+</head>
+<body>
+	<h2>Date 객체</h2>
+	<hr>
+	<script type="text/javascript">
+		let now = new Date();
+		let sDay = new Date(2022, 4, 16, 13, 40, 20); // 월은 0부터 세기때문에 5월은 4로 입력해야함
+
+		document.write("현재 날짜와 시간: " + now.toUTCString() + "<br>");
+		document.write("현재 날짜와 시간: " + now.toLocaleString() + "<br><hr>");
+		document.write(now.getFullYear() + "년도<br>");
+		// 4자리의 연도를 반환하는 메소드
+		document.write(now.getMonth()+ "월<br><hr>");
+		document.write(now.getDate()+ "일<br><hr>");
+		document.write(now.getHours()+ "시<br><hr>");
+		document.write(now.getMinutes()+ "분<br><hr>");
+		document.write(now.getSeconds()+ "초<br><hr>");
+		document.write(now.getMilliseconds()+ "밀리초<br><hr>");
+		document.write("특정 날짜와 시간: " + sDay.toLocaleString() + "<br><hr>");		
+	</script>
+</body>
+</html>

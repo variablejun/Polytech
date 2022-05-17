@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>시간에 따라 배경색 변경하기</title>
+</head>
+<body>
+	<h2>현재시각의 초가 짝수면 violet 배경색, 홀수면 skyblue 배경색으로 변경하기</h2>
+	<hr>
+	<script type="text/javascript">
+		let now = new Date();
+		let seconds = now.getSeconds();
+		if (seconds % 2 == 0) {
+			document.body.style.backgroundColor = "violet"
+		}else{
+			document.body.style.backgroundColor = "skyblue"
+		}
+		document.write("현재 시각: " + now.getHours() + "시 ");
+		document.write(now.getMinutes() + "분 ");
+		document.write(now.getSeconds() + "초");
+		
+	</script>
+</body>
+</html>

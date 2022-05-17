@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String 객체의 메소드들</title>
+</head>
+<body>
+	<h2>String 객체의 다양한 메소드 사용</h2>
+	<hr>
+	<script type="text/javascript">
+		let a = new String("Boys and Girls");
+		let b = "!!";
+
+		document.write("a: " + a + "<br>");
+		document.write("b: " + b + "<br><hr>");
+
+		document.write("a.charAt(9): " + a.charAt(9) + "<br>");
+		document.write("a.concat(b): " + a.concat(b) + "<br>");
+
+		document.write("a.concat(b, \"입니다.\"): " + a.concat(b, "입니다.")  + "<br>");
+
+		document.write("a.indexof('and'): " + a.indexOf('and') + "<br>");
+		document.write("a.indexof('And'): " + a.indexOf('And') + "<br>");		
+
+		document.write("a.slice(9,13): " +a.slice(9,13) + "<br>");
+		document.write("a.substr(9,4): " + a.substr(9,4) + "<br>");		
+		
+		document.write("a.toUpperCase(): " + a.toUpperCase() + "<br>");
+		document.write("a.replace(\"and\", \"or\"): " + a.replace("and", "or") + "<br>");
+		document.write("\"    polytech    \".trim(): " + "    polytech    ".trim() + "<br>");	
+
+		let sub = a.split(" ");
+		for (let i = 0; i < sub.length; i++) {
+				document.write("sub["+i+"] = "+sub[i]+" <br>");
+			}
+		document.write("<br><h3>메소드 사용 후 a 와 b의 문자열 확인</h3>");
+		document.write("a : " + a + "<br>");
+		document.write("b : " + b + "<br>");
+		
+				
+	</script>
+</body>
+</html>
