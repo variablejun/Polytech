@@ -27,7 +27,7 @@ def push(data):
 def pop():
     global SIZE, stack, top
     if (isStackEmpty()):
-        print("스택이 비었습니다.")
+        #print("스택이 비었습니다.")
         return None 
     data = stack[top]
     stack[top] = None
