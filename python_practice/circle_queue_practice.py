@@ -35,7 +35,7 @@ def deQueue(): #데이터 추출하는 함수
     if(isQueueEmpty()): #비어있는지 확인하고 TRUE반환시 함수 종료 
         print("큐가 비었습니다.")
         return None  
-    front = (front + 1) % SIZE # 프론트는 -1부터 시작한다 그래서 1을더해준 것(0)과 사이즈를 %연산하면 첫번째 자리가 나온다
+    front = (front + 1) % SIZE # 프론트는 0부터 시작한다 첫번째 자리는 NONE이기 때문에 1을더해준 것(0)과 사이즈를 %연산하면 첫번째 자리가 나온다
     # 큐는 FIFO구조기 때문에 먼저 들어온것이 먼저나간다
     data = queue[front] # 데이터를 추출하고
     queue[front] = None #비워준다

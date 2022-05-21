@@ -28,7 +28,6 @@ def isQueueEmpty(): #비어있는 지 확인
 def enQueue(data): # 데이터삽입
     global SIZE, queue, front, rear
     if(isQueueFull()): # 꽉찻는지 확인해서 TRUE반환시 함수 종료
-        print("큐가 꽉 찼습니다.")
         return   
     rear = (rear + 1)  % SIZE # 꽉차지 않았으면 마지막 위치를 가리키게 하고 데이터 삽입
     # (rear + 1)  % SIZE 가 원형큐의 마지막위치를 가리킨다고 생각하면 된다.
@@ -38,7 +37,6 @@ def enQueue(data): # 데이터삽입
 def deQueue(): #데이터 추출하는 함수
     global SIZE, queue, front, rear
     if(isQueueEmpty()): #비어있는지 확인하고 TRUE반환시 함수 종료 
-        print("큐가 비었습니다.")
         return None  
     front = (front + 1) % SIZE # 프론트는 -1부터 시작한다 그래서 1을더해준 것(0)과 사이즈를 %연산하면 첫번째 자리가 나온다
     # 큐는 FIFO구조기 때문에 먼저 들어온것이 먼저나간다
@@ -49,6 +47,5 @@ def deQueue(): #데이터 추출하는 함수
 def peek():
     global SIZE, queue, front, rear
     if(isQueueEmpty()):
-        print("큐가 비었습니다.")
         return None 
     return queue[(front + 1) % SIZE] #첫번째 자리에 데이터가 무었이 있는지 확인하는 함수
