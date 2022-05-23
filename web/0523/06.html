@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM 객체 제어 연습</title>
+	<script type="text/javascript">
+		function changeStyle(){
+			let s1 = document.getElementById('s1');
+			s1.style.color = "purple";
+			s1.style.backgroundColor = "blue";
+			s1.style.fontSize = "30px";
+			s1.style.border = "3px dotted red"
+		}
+	</script>
+</head>
+<body>
+	<span id = 's1'>
+		인공지능 소프트웨어과 1학년
+	</span>
+	<button onclick="changeStyle()">
+		문자열 스타일 변경
+	</button>
+</body>
+</html>

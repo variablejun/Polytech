@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h3>난수 10개 생성</h3>
+	<hr>
+	<script type="text/javascript">
+		let n = [];
+	
+		for (let i = 0 ; i <= 10 ; i++){
+			n[i] = Math.floor(Math.random() *100) +1 ;
+
+		}
+		for (let i = 0 ; i <= 10 ; i++){	
+			document.write(n[i] + " ");
+		}
+		document.write("<hr>");
+		let big  = n[0];
+		for (let i = 0 ; i <= 10 ; i++){	
+			 if(n[i + 1] >= big){
+			 	big = n[i + 1];
+			 }
+
+		}
+		document.write("제일 큰 수는 " + big);
+		document.write("<hr>");
+		n.sort(); // 문자 정렬이기 때문에 숫자는 제대로 정렬이안됨
+
+		for (let i = 0 ; i <= 10 ; i++){	
+			document.write(n[i] + " ");
+		}
+	</script>
+</body>
+</html>

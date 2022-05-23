@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM객체 중에서 p태그 요소객체 사용</title>
+</head>
+<body>
+	<h2>DOM 객체의 Property, Style, Listener, Method 사용 하는 방법</h2>
+	<hr>
+	<p id = "p1" style="color:blue; background: yellow;" 
+	onclick="this.style.color = 'teal'">
+		이것은
+		<span style="color:red">
+			문장입니다.
+		</span>
+
+	</p>
+	<script type="text/javascript">
+		let p1 = document.getElementById("p1");
+		let text = "p1.id = " + p1.id + "\n";
+		text += "p1.tagName = " + p1.tagName + "\n";
+		text += "p1.innerHTML = " + p1.innerHTML + "\n";
+		text += "p1.style.color = " + p1.style.color + "\n";
+		text += "p1.onclick = " + p1.onclick + "\n";
+		
+		text += "p1.childElementCount = " + p1.childElementCount + "\n";
+		text += "p1.offsetWidth = " + p1.offsetWidth + "\n";
+		text += "p1.offsetHeight = " + p1.offsetHeight + "\n";
+		alert(text);
+	</script>
+</body>
+</html>
