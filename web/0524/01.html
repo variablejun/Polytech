@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>innerHTML 속성(Property)</title>
+	<script type="text/javascript">
+		function changeImage(){
+			let p = document.getElementById('p1');
+			p.innerHTML = "내가 가지고 싶은 자동차는 <img src ='imgs/bmwimgs.jpg'> 입니다"
+		}
+	</script>
+</head>
+<body>
+	<h2>innerHTML Property 연습: 아래 문자열을 클릭했을 때 이미지가 나타납니다.</h2>
+	<hr>
+	<p id = "p1" style="color: blue;" onclick="changeImage()">여기에
+	<span style="color:red">클릭하세요.</span></p>
+</body>
+</html>

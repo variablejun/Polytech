@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>컬렉션으로 요소 객체를 반환 받아서 사용</title>
+	<script type="text/javascript">
+		function changeSpan(){ 
+			let spans = document.getElementsByTagName("span");//컬렉션(배열) 형태로 반환
+			let colors = ["maroon","red","orange","yellow","olive","purple","fuchsia","write","lime","green","navy","blue","aqua","teal","black","silver","gray"];
+			let n = [];
+
+			for (let i = 0; i <= spans.length -1; i++) {
+				spans[i].style.fontSize = (i*10) + "px" ;
+				spans[i].style.color = colors[i];
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>작두</h3>
+	<h4>HP</h4>
+	<button onclick="changeSpan()">클릭해보세요</button>
+	<hr>
+	<p>
+		난 <span>자의 반</span> 또는 <span>타의 반</span>으로 <span>Hilite</span>의 <span>Highlight</span>
+		공연 <span>다음 날</span> <span>Twit Timeline</span> <span>좀 봤냐?</span> 죄다 <span>Hilite</span>
+		우린 다음 Time을 망가뜨려 안타까운 상황
+		네가 암만 잘해 봤자 그냥 박사 우린 아인슈타인
+	</p>
+</body>
+</html>

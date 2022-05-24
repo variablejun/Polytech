@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>document 객체의 open()와 close()</title>
+	<script type="text/javascript">
+		let win = null;
+
+		function showHTML(){
+			if (win == null || win.closed) { //null일때(처음)or win 닫혀있을때
+				win = window.open("", "win1","width = 300, height = 200");
+			}
+			let area = document.getElementById('area');
+			win.document.open();
+			win.document.write(area.value); //area작성된 html코드가 들어간다
+			win.document.closed();
+			//document 없으면 window에도 오픈,클로즈가 있는데 그게 작동한다.
+		}
+		
+	</script>
+</head>
+<body>
+	<h2>HTML 문서 작성기</h2>
+	<hr>
+	<p>아래의 TextArea에 html 코드를 작성한 후 출력하기 버튼을 클릭하여 실행결과를 확인합니다.</p>
+	<textarea id= "area" rows="10" cols="50"></textarea>
+	<br><br>
+	<button onclick="showHTML()">html 문서 실행</button>
+</body>
+</html>
