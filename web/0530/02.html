@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		div{
+			background-color: lavender;
+			display: inline-block;
+			width: 150px;
+			height: 100px;
+		}
+		span{
+			width: 100px;
+			height: 100px;
+			margin-right: 5px;
+			font: 50pt italic consolas sans-serif;
+		}
+		div#resultDiv{
+			color: purple;
+			font-size: 30pt;
+			font-style: bold;
+		}
+	</style>
+	<script type="text/javascript">
+	let numArr = [0,0,0];
+	function changeNum(obj){
+			let rNum = Math.floor(Math.random() * 3);
+			if(obj.id == "s1"){
+				numArr[0] = rNum;
+			}else if(obj.id == "s2"){
+				numArr[1] = rNum;
+			}else{
+				numArr[2] = rNum;
+				if(numArr[0] == numArr[1] && numArr[1] == numArr[2]){
+					resultDiv.innerHTML = "Success";
+				}else{
+					resultDiv.innerHTML = "Fail";
+				}
+			}
+			obj.innerHTML = rNum;
+	}
+	function init(){
+		document.getElementById("s1").innerHTML = "0";
+		document.getElementById("s2").innerHTML = "0";
+		document.getElementById("s3").innerHTML = "0";
+		document.getElementById("resultDiv").innerHTML = "";
+	}
+	</script>
+
+</head>
+<body>
+	<h3>겜블링 게임</h3>
+	<p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+	<hr>
+	<div>
+		<span id = "s1" onclick="changeNum(this)">0</span>
+		<span id = "s2" onclick="changeNum(this)">0</span>
+		<span id = "s3" onclick="changeNum(this)">0</span></div>
+	<div id="resultDiv" onclick="init()"></div>
+</body>
+</html>

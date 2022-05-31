@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JavaScript코드에서 DOM 객체의 Property(속성)에 이벤트 리스터 작성</title>
+        <script>
+            let p ;
+            function init(){
+                p = document.getElementById("p1");
+                p.onmouseover = over;
+                p.onmouseout = out;
+                                
+            }
+            function over(){
+                p.style.backgroundColor = "yellowgreen";
+
+            }
+            
+            function out(){
+                p.style.backgroundColor = "pink";
+
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <h2>JavaScript코드에서 DOM 객체의 Property(속성)에 이벤트 리스터 작성</h2>
+        <hr>
+        <p id = "p1">
+            마우스를 올리면 blue색상, 벗어나면 white
+        </p>
+    </body>
+</html>

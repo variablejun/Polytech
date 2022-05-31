@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            마우스 이벤트 리스너
+        </title>
+        <style>
+            span{
+                display: inline-block;
+            }
+        </style>
+        <script>
+            let width = 1;
+            function wheel(e, s){
+                if(e.wheelDelta < 0){ // 음수는 아래로 돌렸을 때 양수는 위로
+                    width--;
+                    if(width < 0){
+                        width = 0;
+                    }
+                }else{
+                    width++;
+                }
+                s.style.borderStyle = "ridge";
+                s.style.borderWidth = width + "px";
+               
+            }
+             function over(s){
+                    s.style.borderColor = "violet";
+            }
+                function out(s){
+                    s.style.borderColor = "lightgray";
+                }
+                function down(s){
+                    s.style.fontStyle = "italic";
+                }
+                function up(s){
+                    s.style.fontStyle = "normal";
+                }
+        </script>
+    </head>
+    <body>
+        <h2>마우스 이벤트 리스너 연습</h2>
+        <hr>
+        <div>
+            마우스 관련 <span onmousewheel="wheel(event, this)"
+            onmouseover="over(this)"
+            onmouseout="out(this)" 
+            onmousedown="down(this)"
+            onmouseup="up(this)">이벤트</span>가 발생합니다.
+        </div>
+    </body>
+</html>

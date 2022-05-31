@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		span{
+			visibility: hidden;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function changeState() {
+			let a = document.getElementsByTagName("span");
+			
+				for (let i = 0; i < a.length; i++) {
+					if(a[i].style.visibility =="hidden"){
+						a[i].style.visibility ="visible"
+					}else{
+						a[i].style.visibility ="hidden"
+					}
+
+				}
+		}	
+			
+		
+	</script>
+</head>
+<body>
+	<h1>다음 빈 칸에 숨은 단어? <button onclick="changeState()">show/hide</button></h1>
+	
+	<hr>
+	<ul>
+		<li>I (<span>love</span>) you.</li>
+		<li>CSS is Cascading (<span>Style</span>) Sheet.</li>
+		<li>응답하라 (<span>1988</span>)</li>
+		
+		
+	</ul>
+</body>
+</html>

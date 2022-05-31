@@ -6,6 +6,7 @@ int main(void){
     printf("%05d 세 입니다. \n",year);
     float cm = 0.0;
     printf("키를 입력하세요 :");
+    
     scanf("%f",&cm);
     printf("%-3.2fcm 입니다. \n",cm); // 왼쪽 정렬
 

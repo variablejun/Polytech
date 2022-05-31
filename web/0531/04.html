@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>JavaScript코드에서 익명함수로 이벤트 리스터 작성</title>
+        <script>
+            let p ;
+            function init(){
+                p = document.getElementById("p1");
+                p.onmouseover = function(){
+                    p.style.backgroundColor = "black"
+                };
+                p.addEventListener("mouseout",function(){
+                    p.style.backgroundColor = "pink";
+                });
+                                
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <h2>JavaScript코드에서 익명함수로 이벤트 리스터 작성</h2>
+        <hr>
+        <p id = "p1">
+            로드시 white 마우스를 올리면 yellowgreen, 벗어나면 pink
+        </p>
+    </body>
+</html>

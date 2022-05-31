@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>태그내에 이벤트 리스터 작성</title>
+        <script>
+            function over(p,bgcolor){
+                p.style.backgroundColor = bgcolor;
+
+            }
+          
+        </script>
+    </head>
+    <body>
+        <h2>태그(요소)내에 이벤트 리스터 작성</h2>
+        <hr>
+        <p onmouseover="over(this, 'blue')" onmouseout="over(this,'white')">
+            마우스를 올리면 blue색상, 벗어나면 white
+        </p>
+    </body>
+</html>

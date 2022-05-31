@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>event객체의 참조값 전달 받는 방법들</title>
+        <script>
+            function f(e){
+                alert(e.type);
+
+            }
+            function init(){
+                document.getElementById("p1").onmouseover = f;// onload를 주어 바디가 로드 되어 p1이 생성될때 작동하게
+            } // 매개변수 없이 전달
+        </script>
+    </head>
+    <body onload="init()">
+        <h2>event객체의 참조값 전달 받는 방법들</h2>
+        <hr>
+        <p id="p1">이 곳에 마우스를 올려 보세요~</p>
+        <button onclick="f(event)">클릭하세요</button>
+    </body>
+</html>
