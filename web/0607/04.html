@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>클릭하면 이미지 변경</title>
+        <style>
+            img{
+                border: 20px ridge wheat;
+            }
+
+        </style>
+        <script>
+            let files = ["imgs/0.jpg","imgs/1.jpg","imgs/2.jpg","imgs/3.jpg","imgs/4.jpg","imgs/5.jpg","imgs/6.jpg","imgs/7.jpeg"]
+            let imgs = new Array();
+            for(let i = 0; i<files.length;i++){
+                imgs[i] = new Image();
+                imgs[i].src = files[i];
+            }
+            let next = 1;
+            function change(img){
+                img.src = imgs[next].src;
+                next++;
+                next %= imgs.length;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>이미지를 클릭하면 다음 이미지로 변경됩니다.</h2>
+        <hr>
+        <img src = "imgs/0.jpg" onclick="change(this)">
+
+    </body>
+</html>

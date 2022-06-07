@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>onload리스너를 사용하여 이미지 크기 출력</title>
+        <script>
+            function changeImage(){
+                let combo = document.getElementById("combo");
+                let img = document.getElementById("img");
+                let span = document.getElementById("printSize");
+                img.onload = function(){
+                    span.innerHTML = img.width + "X" + img.height;
+
+                }
+                let index = combo.selectedIndex;
+                img.src = combo.options[index].value;
+            }
+        </script>
+    </head>
+    <body onload="changeImage()">
+        <h2>onload리스너를 사용하여 이미지 크기 출력</h2>
+        <select id = "combo" onchange="changeImage()">
+            <option value="imgs/bmw.jpg">비엠</option>
+            <option value="imgs/ghi.jpg">마세라티</option>
+            <option value="imgs/gene.jpg">제네시스</option>
+        </select>
+        <span id = "printSize">
+            이미지크기 출력
+        </span>
+        <br><br>
+        <img id = "img" src = "imgs/bmw.jpg">
+    </body>
+</html>

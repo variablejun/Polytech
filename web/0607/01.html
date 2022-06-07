@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>마우스 이벤트 객체의 Property</title>
+        <style>
+            div{
+                background-color: aliceblue;
+                width: 250px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>마우스 이벤트 객체의 x, y 좌표를 알아내는 Property</h2>
+        <hr>
+        <h3>이미지 위에 마우스를 올려서 움직여 보세요. 그러면 div 영역에 좌표 값이 표시됩니다</h3>
+        <br>
+        <img src = "imgs/ghi.jpg" width="650px" height="400px" onmousemove="mMove(event)" onmouseout="mout(event)">
+        <br><br>
+        <div id = "div1"></div>
+        <script type = "text/javascript">
+            let d1 = document.getElementById("div1");
+            	
+
+            function mMove(e){
+                let text = "버튼의 종류: " + e.button + "<br>";
+                text += "(screenX, screenY): 스크린의 시작점이 기준 = " + e.screenX + ", " + e.screenY + "<br>";
+                text += "(clientX, clientY): body(window의 문서영역)의 시작점이 기준 = " + e.clientX + ", " + e.clientY + "<br>";
+                text += "(X, Y): target객체의 부모가 시작점이 기준 = " + e.x + ", " + e.y + "<br>";
+                text += "(offsetX, offsetY): target 객체(이벤트가 발생하는) 시작점이 기준 = " + e.offsetX + ", " + e.offsetY + "<br>";
+                
+                
+                d1.innerHTML = text;
+            }
+            function mout(e){
+
+                d1.innerHTML = " ";
+            }
+        </script>
+    </body>
+</html>

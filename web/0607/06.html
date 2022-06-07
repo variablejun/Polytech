@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>라디오 버튼 사용하기</title>
+        <script>
+            function findChecked(){
+                let found = null;
+                let cities = document.getElementsByName("city");
+                for(let i = 0; i <cities.length;i++){
+                    if(cities[i].checked==true){
+                        found = cities[i];
+
+                    }
+                }
+                if(found != null){
+                    alert(found.value + "라디오 버튼이 선택되었음");
+                }else{
+                    alert("선택된 라디오 버튼이 없음");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>선택 라디오 버튼 알아내기</h2>
+        <h3>버튼을 클릭하면 선택된 라디오 버튼의 value속성의 값을 출력해보자.</h3>
+        <hr>
+        <input type="radio" name="city" value="서울" checked>서울
+        <input type="radio" name="city" value="인천" >인천
+        <input type="radio" name="city" value="강릉" >강릉
+        <button type="button" onclick = "findChecked()">find checked</button>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>onblur와 onfocus 이벤트리스너</title>
+        <script>
+            let nameText, stuIdText;
+            function loadDom(){
+                nameText = document.getElementById("name1");
+                stuIdText = document.getElementById("stuId");
+                nameText.focus();
+            }
+            function checkFill(){
+                if(nameText.value == ""){
+                    nameText.focus();
+                }
+            }
+        </script>
+    </head>
+    <body onload="loadDom()">
+        <h2>onblur onfocus 이벤트리스너</h2>
+        <hr>
+        <h3>
+            이름을 입력하는 상자에 문자열을 입력하지 않았을 때 다른 dom 객체에 포커스를 갖지 못하도록 하는 예제
+        </h3>
+        이름 : <input type="text" id = "name1" onblur="checkFill()"><br><br>
+        학번 : <input type="text" id = "stuId"><br><br>
+
+    </body>
+</html>

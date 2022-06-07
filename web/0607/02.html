@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            단축메뉴 금지
+        </title>
+        <script>
+            function hideMenu(){
+                alert("오른쪽 마우스 버튼 금지");
+                return false;
+            }
+            document.oncontextmenu = hideMenu;
+            function notice(){
+                alert("본 페이지는 2022년 7월 1일부터 http://www.poly.co.kr로 이전될 예정입니다.");
+            }
+
+        </script>
+    </head>
+    <body onload="notice()">
+        <h2>oncontextmenu와 기본 행동 금지</h2>
+        <hr>
+        <h3>마우스 오른쪽 버튼을 클릭했을 때 나타나는 단축메뉴를 금지하려고 합니다.</h3>
+        <img src = "imgs/ghi.jpg">
+
+    </body>
+</html>
