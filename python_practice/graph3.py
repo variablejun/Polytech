@@ -16,32 +16,47 @@ def printGraph(g):
         
     print()
 
+gSize = 6
+
 def findVertex(g, findVtx):
+    stack = []
+    visitiedAry = []
+    
+    current = 0
+    stack.append(current)
+    visitiedAry.append(current)
+    
     while (len(stack) != 0):
         next = None
-    for vertex in range(4):
-        if G1.graph[current][vertex] == 1:
-            if vertex in visitiedAry: # 방문한 적이 있는 정점이면 탈락
-                pass
-            else:# 방문한 적이 없으면 다음 정점으로 지정
-                next = vertex
-                break
-    print("cur : ", current, "ver : ", vertex, "next : ", next)
-    if next != None : # 다음에 방문할 정점이 있는경우
-        current = next
-        stack.append(current)
-        visitiedAry.append(current)
-        print("current : ", chr(ord('A') + current), "stack:", stack)
-    else: # 다음에 방문할 정점이 없는경우 
-        current = stack.pop()
-        print("pop : ", chr(ord('A') + current), "stack:", stack)
+        for vertex in range(gSize):
+            if G1.graph[current][vertex] != 0:
+                if vertex in visitiedAry: # 방문한 적이 있는 정점이면 탈락
+                    pass
+                else:# 방문한 적이 없으면 다음 정점으로 지정
+                    next = vertex
+                    break
+
+        if next != None : # 다음에 방문할 정점이 있는경우
+            current = next
+            stack.append(current)
+            visitiedAry.append(current)
+
+        else: # 다음에 방문할 정점이 없는경우 
+            current = stack.pop()
+
+            
+    if findVtx in visitiedAry:
+        return True
+    else :
+        return False
+
        
      
 G1 = None
 nameAry = ['춘천','서울','속초','대전','광주','부산']
 춘천,서울,속초,대전,광주,부산 = 0,1,2,3,4,5
 
-gSize = 6
+
 G1 = Graph(gSize)
 G1.graph[춘천][서울] = 10; G1.graph[춘천][속초] = 15
 G1.graph[서울][춘천] = 10; G1.graph[서울][속초] = 40;G1.graph[서울][대전] = 11; G1.graph[서울][광주] = 50
@@ -60,7 +75,32 @@ edgeAry = []
 for i in range(gSize):
     for k in range(gSize):
         if G1.graph[i][k] != 0:
-            edgeAry.append([G1.graph[i][k]], i, k)
+            edgeAry.append([G1.graph[i][k], i, k])
             
 from operator import itemgetter
 edgeAry = sorted(edgeAry, key=itemgetter(0),reverse=True)
+
+newAry = []
+for i in range(0, len(edgeAry),2):
+    newAry.append(edgeAry[i])
+    
+index = 0
+while (len(newAry) > gSize-1):
+    start  = newAry[index][1]
+    end = newAry[index][2]
+    saveCost = newAry[index][0]
+    
+    G1.graph[start][end] = 0
+    G1.graph[end][start] = 0
+    startYN = findVertex(G1, start)
+    endYN = findVertex(G1,end)
+    
+    if startYN and endYN :
+        del(newAry[index])
+    else :
+        G1.graph[start][end] = saveCost
+        G1.graph[end][start] = saveCost
+        index +=1
+        
+print("## 최소 비용의 자전거 도로 연결도 ##")
+printGraph(G1)
