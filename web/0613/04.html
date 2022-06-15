@@ -1,0 +1,69 @@
+<html>
+
+    <head>
+        <style>
+            td{
+                width: 50px;
+                height: 50px;
+                border: 1px solid aqua;
+            }
+        </style>
+        <script>
+            let tds;
+            let index = 0;
+            let prevIndex = 0;
+            function init(){
+                tds = document.getElementsByTagName("td");
+                tds[index].style.backgroundColor = "aqua";
+            }
+            function keyDown(e){
+                switch(e.key){
+                    case "ArrowDown":
+                        if(index/3 >= 2){ // 
+                            return;
+                        }
+                        index += 3;
+                        break;
+                    case "ArrowUp":
+                        if(index/3 < 1){ // 
+                            return;
+                        }
+                        index -= 3;
+                        break;
+                    case "ArrowLeft":
+                        if(index%3 == 0){ // 
+                            return;
+                        }
+                        index--;
+                        break;
+                    case "ArrowRight":
+                        if(index%3 == 2){ // 258
+                            return;
+                        }
+                        index++;
+                        break;
+                }
+                tds[index].style.backgroundColor = "aqua";
+                tds[prevIndex].style.backgroundColor = "white";
+                prevIndex = index;
+            }
+        </script>
+    </head>
+
+    <body onload="init()" onkeydown="keyDown(event)">
+        <h2>방향키를 사용하여 셀 위치 이동</h2>
+        <hr>
+        <table>
+            <script>
+                for(let i = 0; i <= 2; i++){
+                    document.write("<tr>");
+                    for(let j = 0; j <=2;j++){
+                        document.write("<td>");
+                    }
+                    
+                }
+            </script>
+        </table>
+    </body>
+
+</html>

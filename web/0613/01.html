@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            let sum = 0;
+            function calc(ch){
+                if(ch.checked){
+                    sum += parseInt(ch.value);
+                }else{
+                    sum -= parseInt(ch.value);
+
+                }
+                document.getElementById("result").value = sum;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h2>물품을 선택하면 금액이 자동 계산됩니다.</h2>
+        <hr>
+        <form>
+            <input type="checkbox" name = "ch1" value="10000" onclick="calc(this)"> 모자 1만원
+            <input type="checkbox" name = "ch2" value="30000" onclick="calc(this)"> 구두 3만원
+            <input type="checkbox" name = "ch3" value="80000" onclick="calc(this)"> 가방 8만원
+            <br>
+            지불할 금액의 합계: <input type="text" id = "result" value="0" readonly>원
+
+        </form>
+    </body>
+</html>

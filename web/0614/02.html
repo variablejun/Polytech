@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+            function size(e, img){
+                if(e.wheelDelta > 0){
+                    if(img.width < 50)
+                        return;
+                    img.width -= img.width * 0.05;
+                    img.height -= img.height * 0.05;
+                         
+                }else{
+                    img.width += img.width * 0.05;
+                    img.height += img.height * 0.05;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>마우스 휠 이용 이미지 확대/축소</h2>
+        <hr>
+        <p>이미지 우에 휠을 위로 굴리면 이미지가 축소, 아래는 확대.
+        </p>
+        <img src="imgs/lexus.jpg" onwheel="size(event, this)" id = "dd">
+    </body>
+</html>

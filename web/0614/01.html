@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            div{
+                display: inline-block;
+                position: absolute;
+            }
+        </style>
+        <script>
+            let d;
+            let text;
+            function init(){
+                d = document.getElementById("div1");
+            }
+            document.onmousemove = function(e){
+                d.style.left = e.x;
+                d.style.top = e.y;
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <h2>이미지 커서 만들기</h2>
+        <hr>
+        <p>마우스를 움직이면 이미지로 만든 커서가 마우스를 따라다닙니다.
+        </p>
+        <div id = "div1"><img src="imgs/kang.PNG" ></div>
+    </body>
+</html>

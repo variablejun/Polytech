@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: aquamarine;
+                display: inline-block;
+                position: absolute;
+            }
+        </style>
+        <script>
+            
+            let div= document.getElementById('d1');
+            let lis = document.getElementsByTagName('li');
+            lis[0].onmouseover = function(e){
+                div.style.left = e.x + 5;
+                div.style.top = e.y + 5;
+                
+            }
+            function listover(e){
+                let text = "자전거탐";
+                div.innerHTML = text;
+            }
+            function listout(){
+                div.innerHTML = '';
+            }
+        </script>
+    </head>
+    <body>
+        <h2>아이템에 마우스를 올리면 설명 출력</h2>
+        <hr>
+        <ul>
+            <li onmouseover="listover(event)" onmouseout="listout()"> 자전거로 대한민국 일주
+            </li>
+            <li> 책 100권 읽기 
+            </li>
+            <li> 철인 3종 경기 준비
+            </li>
+            <li> 자바스크립트 정복
+            </li>
+        </ul>
+        <div id = "d1">
+
+        </div>
+    </body>
+</html>
