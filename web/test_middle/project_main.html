@@ -1,63 +1,190 @@
 <html>
     <header>
+        <link rel="stylesheet" type="text/css" href="slider.css">
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+        
         <style>
-            img{
-                margin-left: 30%;
-                height: 500;
-                width: 700;
-                margin-top: 5%;
-            }
-            h1{
+            .container{
+                width: 600px;
+                height: 400px;
+                
+                margin: 0 auto;
+              }
+              .album{
+                width: 600px;
+                height: 400px;
+                overflow: hidden;
+              }
+              .images{
+                position: relative;
+                display: flex;
+                height: 250px;
+              }
+              img{
+                width: 600px;
+                height: 400px;
+              }
+              button, button:active, button:focus{
+                width: 50px; 
+                height: 25px;
+                background-color:rgb(31, 225, 141);
+                outline: none;
+                border: none;
+              }
+              button:disabled{  
+                background-color: gainsboro;
+              }
+              .prev{
+                float: left;
+              }
+              .next{
+                float: right;
+              }
+              h1{
+                font-family: 'NanumBarunGothicBold';
+                font-size: xx-large;
                 text-align: center;
-                font-family: sans-serif;
-            }
-            h2{
-                font-family: sans-serif;
-                margin-left: 30%;
-            }
-            h3{
-                font-family: sans-serif;
-                margin-left: 30%;
+              }
+              h2{
+                font-family: 'NanumBarunGothicBold';
+                font-size: xx-large;
+                padding-left: 31%;
+              }
+              #date1{
+                font-family: 'NanumBarunGothicBold';
+                padding-left: 31%;
+              }
+              #member{
+                font-family: 'NanumBarunGothicBold';
+                padding-left: 31%;
+              }
+              #comment{
+                font-family: 'NanumBarunGothicBold';
+                padding-left: 31%;
+              }
+              body{
+                background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+              }
+              #intro1{
+                color: rgb(31, 225, 141);
+                font-size: x-large;
             }
         </style>
+        <script>
+          let num = 0;
+          let date1 = null;
+          let member = null;
+          let comment = null;
+          
+          function plus(){
+            num++;
+            date1 = document.getElementById("date1");
+            member = document.getElementById("member");
+            comment = document.getElementById("comment");
+
+            if(num==0){
+            date1.innerHTML = "날짜 : 2022-08-31";   
+            member.innerHTML = "인원 : 1명";
+            comment.innerHTML = "AI허브 데이터를 이용한 농산물 분류모델 입니다.";           
+            }else if(num==1){
+              date1.innerHTML = "날짜 : 2022-10-31";   
+              member.innerHTML = "인원 : 4명";
+              comment.innerHTML = "MBTI 유형별 얼굴 생성 모델입니다.";     
+            }else if(num==2){
+              date1.innerHTML = "날짜 : 2022-10-17";   
+              member.innerHTML = "인원 : 4명";
+              comment.innerHTML = "Style gan2 with ada논문 리뷰 입니다.";     
+            }else if(num==3){
+              date1.innerHTML = "날짜 : 2022-10-10";   
+              member.innerHTML = "인원 : 4명";
+              comment.innerHTML = "YOLOv4논문 리뷰 입니다.";     
+            }
+
+          }
+          function minus(){
+            num--;
+            date1 = document.getElementById("date1");
+            member = document.getElementById("member");
+            comment = document.getElementById("comment");
+
+            if(num==0){
+            date1.innerHTML = "날짜 : 2022-08-31";   
+            member.innerHTML = "인원 : 1명";
+            comment.innerHTML = "AI허브 데이터를 이용한 농산물 분류모델 입니다.";           
+            }else if(num==1){
+              date1.innerHTML = "날짜 : 2022-10-31";   
+              member.innerHTML = "인원 : 4명";
+              comment.innerHTML = "MBTI 유형별 얼굴 생성 모델입니다.";     
+            }else if(num==2){
+              date1.innerHTML = "날짜 : 2022-10-17";   
+              member.innerHTML = "인원 : 4명";
+              comment.innerHTML = "Style gan2 with ada논문 리뷰 입니다.";     
+            }else if(num==3){
+              date1.innerHTML = "날짜 : 2022-10-10";   
+              member.innerHTML = "인원 : 4명";
+              comment.innerHTML = "YOLOv4논문 리뷰 입니다.";     
+            }
+
+          }
+
+          
+        </script>
     </header>
     <body>
         <h1>Project&Papers</h1>
 
-        <a href="project_1.html">
-            <img src="imgs/nongsan.jpg" >
-        </a>
-        <h2>농산물 분류 모델</h2>
-        <h3>
-            소개 : AI허브 농산물 데이터를 이용한 분류 모델입니다.<br>
-        </h3>
+        <div class="container">
+            <div class="album">
+              <div class="images">
+                <a href="project_1.html"><img src="imgs/nongsan.jpg"></a>
 
-        <a href="project_2.html">
-            <img src="imgs/mb.png" >
-        </a>
-        <h2>MBTI 유형별 얼굴 생성 모델</h2>
-        <h3>
-            소개 : 직접 유형별로 데이터를 수집하여 만든 생성 모델입니다.<br>
-        </h3>
+                <a href="project_2.html"><img src="imgs/mb.png"></a>
+                <a href="project_4.html"><img src="imgs/st.png"></a>
+                <a href="project_3.html"><img src="imgs/dt.jpg"></a>
+              </div>
+            </div>
+            <button class="previous" onclick="minus()">←</button> 
+            <button class="next" onclick="plus()">→</button>  
+          </div> 
 
-        <a href="project_3.html">
-            <img src="imgs/dt.jpg" >
-        </a>
-        <h2>YOLOv4 논문 리뷰</h2>
-        <h3>
-            소개 : 당시 최신 딥러닝 기법들을 적극 활용하여 설계된 객체 탐지 모델 YOLOv4의 논문을 리뷰하였습니다.<br>
-        </h3>
-
-        <a href="project_4.html">
-            <img src="imgs/st.png" >
-        </a>
-        <h2>Style GAN2 with ada논문 리뷰</h2>
-        <h3>
-            소개 : 기존 style GAN 에서 이미지 증폭 기술을 더한 Style GAN2 with ada논문 리뷰입니다.<br>
-        </h3>
-
-
+          <script src="main.js"></script>
     </div>
+    <br>
 
+    <h2>프로젝트 개요</h2>
+    <span id = "date1">날짜 : 2022-08-31</span><br>
+    <span id = "member">인원 : 1명</span><br>
+    <span id = "comment">AI허브 데이터를 이용한 농산물 분류모델 입니다.</span><br>
+      
+
+    <div class = "menu" id="jsme">
+        <h1>MENU</h1>
+        <ul class="menu_list">
+            <a href="javascript:load('main_2.html')"
+            >
+            <li class="item">
+                HOME
+            </li></a>
+            <a href="javascript:load('intro.html')"
+            >
+            <li class="item">
+                INTRO
+            </li></a>
+          
+            <a href="javascript:load('music.html')"
+            >
+            <li class="item">
+                
+            </li></a>
+            <a href="javascript:load('project_main.html')"
+            >
+            <li class="item">
+                <span id="intro1">Project&Papers</span>
+            </li></a>
+        </ul>
+    </div>
+    <script type="text/javascript" src="silder.js">
+        
+    </script>
     </body>
 </html>

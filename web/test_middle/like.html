@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="slider.css">
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+        
+        <style>
+            #bgc{
+                background-color: white;
+            }
+            #div1{
+                display: inline-block;
+                margin-top: 10%;
+                margin-left: 11%;
+                width: 300px;
+                height: 600px;
+                background-color: #000;
+                background-image: url("imgs/car2.gif");
+                background-size: cover;
+                background-position: center center;
+                opacity: 0.5;
+            }
+
+            #div1:hover{
+                background-image: url("imgs/car.gif");
+            }
+
+            #div2{
+                display: inline-block;
+                margin-top: 10%;
+                margin-left: 11%;
+                width: 300px;
+                height: 600px;
+                background-color: #000;
+            }
+            #div3{
+                display: inline-block;
+                margin-top: 10%;
+                margin-left: 11%;
+                width: 300px;
+                height: 600px;
+                background-color: #000;
+            }
+         
+        </style>
+        <script>
+            let bgc = document.getElementById("bgc");
+            function mouseover(obj){
+                obj.style.opacity = 1;
+                
+               // background-image: linear-gradient(to top, #8036ce 0%, #1d1dce 100%);
+             }
+            function mouseout(obj){
+                obj.style.opacity = 0.5;
+
+            }
+        </script>
+    
+    </head>
+    <body id = "bgc">
+   
+        <div id="div1" onmouseover="mouseover(this)" onmouseout="mouseout(this)">
+            
+        </div>
+        <div id="div1_1"></div>
+        <div id="div2">
+            
+        </div>
+
+        <div id="div3">
+            
+        </div>
+
+        <div class = "menu" id="jsme">
+            <h1>MENU</h1>
+            <ul class="menu_list">
+                <a href="javascript:load('main_2.html')"
+                >
+                <li class="item">
+                    HOME</span>
+                </li></a>
+                <a href="javascript:load('intro.html')"
+                >
+                <li class="item">
+                    INTRO
+                </li></a>
+              
+                <a href="javascript:load('music.html')"
+                >
+                <li class="item">
+                    <span id="intro1">insta</span>
+                </li></a>
+                <a href="javascript:load('project_main.html')"
+                >
+                <li class="item">
+                    project
+                </li></a>
+            </ul>
+
+        </div>
+        <script type="text/javascript" src="silder.js">
+        
+        </script>
+    </body>
+</html>

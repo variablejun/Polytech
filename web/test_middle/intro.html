@@ -1,6 +1,13 @@
 <html>
 <header>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slider.css">
+   
     <style>
+        body{
+            overflow: hidden;
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        }
         .img_text_top{
             position: absolute;
             top: 50%;
@@ -8,28 +15,32 @@
             transform: translate(-50%, -150%);
             color: rgba(255, 255,255, 0.8);
             font-size: 60px;
-            font-family: sans-serif;
+            font-family: 'NanumBarunGothicBold';
         }
         h2{
-            font-family: sans-serif;
+            font-family: 'NanumBarunGothicBold';
             text-align: center;
         }
         h3{
-            font-family: sans-serif;
+            font-family: 'NanumBarunGothicBold';
             text-align: center;
         }      
         div{
             text-align: center;
-            font-family: sans-serif;
+            font-family: 'NanumBarunGothicBold';
         } 
 
         .img_text{
             display: block;
             margin: auto;
             position: relative;
-            width: 750;
-            height: 500;  
-            top: 10%;
+            width: 650;
+            height: 400;  
+            top:2%
+        }
+        #intro1{
+            color: rgb(31, 225, 141);
+            font-size: x-large;
         }
     </style>
 </header>
@@ -40,7 +51,7 @@
         <h1 class="img_text_top">Developer Jun's</h1>
     </div>
 
-<h2>객체 탐지, GAN 프로젝트에 흥미가 많습니다..!</h2>
+<h2>객체 탐지, GAN 프로젝트, 데이터베이스에 흥미가 많습니다..!</h2>
  
 <h3>Studying!!</h3>
 <div>
@@ -72,5 +83,34 @@ MOS master<br>
 <br>
 </div>
 
+<div class = "menu" id="jsme">
+    <h1>MENU</h1>
+    <ul class="menu_list">
+        <a href="javascript:load('main_2.html')"
+        >
+        <li class="item">
+            HOME
+        </li></a>
+        <a href="javascript:load('intro.html')"
+        >
+        <li class="item">
+            <span id = "intro1">INTRO</span>
+        </li></a>
+    
+        <a href="javascript:load('music.html')"
+        >
+        <li class="item">
+            insta
+        </li></a>
+        <a href="javascript:load('project_main.html')"
+        >
+        <li class="item">
+            project
+        </li></a>
+    </ul>
+</div>
+<script type="text/javascript" src="silder.js">
+        
+</script>
 <body>
 </html>
