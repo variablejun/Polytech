@@ -68,7 +68,7 @@ def deleteNode(deleteData):
             pre.link = current.link
             del(current)
             return
-        
+'''        
 def findNode(findData):
     global memory, head, current, pre    
     current = head
@@ -79,7 +79,46 @@ def findNode(findData):
         if current.data == findData:
             return current
     return Node()
+'''
 
+def findNode(findData) : 
+    global memory, head, current, pre 
+    current = head 
+    if current.data == findData : 
+        return current 
+    while current.link != head : 
+       current = current.link 
+       if current.data == findData : 
+           return current 
+    return Node()
+
+"""
+current.link != None 
+나경 규리 하영 지선 지헌 
+유빈 나경 규리 하영 지선 지헌 
+유빈 나경 규리 하영 승희 지선 지헌
+유빈 나경 규리 하영 승희 지선 지헌 아린
+나경
+아린
+지선
+유빈 나경 규리 하영 승희 지선 지헌
+유빈 나경 규리 하영 지선 지헌
+유빈 규리 하영 지선 지헌
+규리 하영 지선 지헌
+
+head.link != None
+나경 규리 하영 지선 지헌 
+유빈 나경 규리 하영 지선 지헌 
+유빈 나경 규리 하영 승희 지선 지헌
+유빈 나경 규리 하영 승희 지선 지헌 아린
+나경
+아린
+지선
+유빈 나경 규리 하영 승희 지선 지헌
+유빈 나경 규리 하영 지선 지헌
+유빈 규리 하영 지선 지헌
+규리 하영 지선 지헌
+"""
 memory = []
 head, current, pre = None, None, None
 dataArray = ["나경","규리","하영","지선","지헌"]

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>window.location 객체</title>
+        <script>
+            function load(){
+                let sel = document.getElementById("sel");
+                
+                window.location = sel.options[sel.selectedIndex].value;
+
+            }
+        </script>
+    </head>
+    <body>
+        <select id="sel">
+            <option value="http://www.naver.com/">네이버</option>
+            <option value="http://www.google.co.kr/">구글</option>
+            <option value="http://www.daum.net/">다음</option>
+        
+        </select>
+        <br>
+        <button onclick="load()">웹사이트 이동</button>
+    </body>
+</html>

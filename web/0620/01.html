@@ -1,0 +1,31 @@
+<html>
+
+    <head>
+        <title>
+            setTime() 예제 
+        </title>
+        <script>
+            let timerId = null;
+
+            function startTimer(title, time, img){
+                timerId = setTimeout("load('https://www.kopo.ac.kr/index.do')",time);
+                img.title = title;
+
+            }
+            function cancleTimer(){
+                if(timerId != null){
+                   clearTimeout(timerId); 
+                }
+                
+            }
+            function load(url){
+                window.location = url;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>로고 이미지 위에 마우스를 3초간 올려 놓고 있으면 해당 페이지로 이동합니다.</h2>
+        <hr>
+        <img src = "imgs/pol_logo.PNG" width="300px" onmouseover="startTimer('폴리텍페이지로 이동합니다',3000,this)" onmouseout="cancleTimer()">
+    </body>
+</html>

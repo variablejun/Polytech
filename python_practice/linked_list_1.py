@@ -8,14 +8,14 @@ class Node(): # Node 라는 구조체(데이터형)를 만든것, 실행하면 �
         self.link = None
 
 node1 = Node()
-node1.data = "나경" 
+node1.data = "서울" 
 
 node2 = Node()
-node2.data = "하영" 
+node2.data = "정수" 
 node1.link = node2
 
 node3 = Node()
-node3.data = "지헌" 
+node3.data = "인공지능" 
 node2.link = node3
 
 node4 = Node()
@@ -33,12 +33,14 @@ node2.link = newNode # 그리고 node2가 newNode를 가리키도록 삽입한�
 
 node2.link = newNode.link # newnode 가 가리키는 node3를 node2 링크에 넣어주고 뉴노드 삭제
 del(newNode)
-# print(node1.data, end=' ')
-# print(node1.link.data, end=' ')
-# print(node1.link.link.data, end=' ')
-# print(node1.link.link.link.data, end=' ')
-# print(node1.link.link.link.link.data, end=' ')
+print(node1.data, end=' ')
+print(node1.link.data, end=' ')
+print(node1.link.link.data, end=' ')
 
+print(node1.link.link.link.data, end=' ')
+print(node1.link.link.link.link.data, end=' ')
+
+"""
 current = node1 # 변수에 헤드를 넣고 
 print(current.data, end=' ') # 헤드 출력
 while current.link != None : # 링크가 None이 아닐때 까지
@@ -46,4 +48,4 @@ while current.link != None : # 링크가 None이 아닐때 까지
     # 현재 link 안에 node2를 입력해주는것
     
     print(current.data, end=' ') # 입력받은 링크값(node2)의 데이터를 출력
-    
+"""    

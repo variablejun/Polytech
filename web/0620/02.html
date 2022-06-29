@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            setInterval 연습
+        </title>
+        <script>
+            let span = null;
+            let timerId = null;
+
+            function init(){
+                span = document.getElementById("s1");
+                timerId = setInterval("doRotate()",200);
+            }
+            function doRotate(){
+                let str = span.innerHTML;
+                let firstChar = str.substr(0,1);
+                let remains = str.substr(1, str.length -1);
+                str = remains + firstChar;
+                span.innerHTML = str;
+            }
+            function stopTimer(){
+                clearInterval(timerId);
+            }
+
+        </script>
+    </head>
+    <body onload="init()">
+        <h2>setInterval()를 사용해서 일정 시간 간격으로 문자열의 위치를 이동하여 출력시키는 예제입니다.</h2>
+        <h2>움직이는 문자열을 클릭하면 회전이 중단됩니다.</h2>
+        <hr>
+        <div>
+            <span id="s1" style="background-color: lavender;" onclick="stopTimer()">자동 회전하는 텍스트 입니다.</span>
+
+        </div>
+    </body>
+</html>
