@@ -1,0 +1,29 @@
+import java.util.*;
+public class roof_scanner {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int num = 0;
+		int sum = 0;
+		int count = 0;
+		
+		while(true) {
+			System.out.print("숫자를 입력하세요 : ");
+			num = scanner.nextInt();
+			if(num == -1) {
+				System.out.println("종료");
+				break;
+				
+			}
+			count++;
+			sum = sum + num;
+			System.out.println("개수 : "+ count);
+			System.out.println("합계 : "+ sum);
+			System.out.println("평균 : "+ (double)sum/count);
+			System.out.println("=========================");
+			
+		}
+		
+	}
+
+}

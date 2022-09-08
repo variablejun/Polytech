@@ -1,0 +1,21 @@
+import java.util.*;
+public class roof_scanner {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int num = 0;
+		int sum = 0;
+		int count = 0;
+		
+		while(true) {
+			num = scanner.nextInt();
+			count++;
+			sum = sum + num;
+			System.out.println("합계 : "+ sum);
+			System.out.println("평균 : "+ (double)sum/count);
+			
+		}
+		
+	}
+
+}

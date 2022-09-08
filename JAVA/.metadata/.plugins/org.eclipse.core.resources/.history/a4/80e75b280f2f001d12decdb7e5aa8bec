@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class roof_avg {
+
+	public static void main(String[] args) {
+		System.out.println("숫자를 입력하세요 : ");
+		Scanner scanner = new Scanner(System.in);
+		int num = 0;
+		int count = 0;
+		int sum = 0;
+		while(true) {
+			num = scanner.nextInt();
+			
+			if(num == -1) {
+				break;
+			}
+			sum = sum + num;
+			count++;
+			System.out.println("입력 정수 평균 : " + sum / count );
+		}
+	}
+
+}
